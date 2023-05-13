@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Terrain
+    uniqueID: 4190797823
+    locked: 0
+  - name: Alive
+    uniqueID: 623794137
+    locked: 0
+  - name: UI
+    uniqueID: 1307513981
+    locked: 0
