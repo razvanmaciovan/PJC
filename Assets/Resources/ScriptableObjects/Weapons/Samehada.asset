@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719940de8b79273478e291a0c3a29c77, type: 3}
+  m_Name: Samehada
+  m_EditorClassIdentifier: 
+  Name: Samehada
+  EquipmentLevel: 40
+  Damage: 20
+  Delay: 2
+  WeaponType: 0
+  AnimatorController: {fileID: 9100000, guid: 49bae27db660a354197339def8dc4d62, type: 2}
+  WeaponPrefab: {fileID: 7601381694801315881, guid: 6c86ac37444101a44b40c83a6dd30d58, type: 3}
