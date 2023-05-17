@@ -22,12 +22,22 @@ public class GameManager : Singleton<GameManager>
 
     private void OnLevelWasLoaded(int level)
     {
+        var player = GameObject.FindGameObjectWithTag(UnityTags.Player.ToString()).GetComponent<PlayerController>();
         print("level load");
         //_mainCanvas = GameObject.FindGameObjectWithTag(UnityTags.Canvas.ToString());
         //if (LastScene != UnityScenes.Home ||
             //SceneManager.GetActiveScene().buildIndex == (int)UnityScenes.StartMenu) return;
-        var weaponSlot = GameObject.FindGameObjectWithTag(UnityTags.Player.ToString()).GetComponent<PlayerController>().WeaponSlot;
+        var weaponSlot = player.WeaponSlot;
+        if (weaponSlot.transform.childCount > 0)
+        {
+            foreach (Transform child in weaponSlot.transform) {
+                Destroy(child.gameObject);
+            }
+        }
         PlayerData.EquippedWeapon.Spawn(weaponSlot.transform);
+        player.HeadAnimator.runtimeAnimatorController = PlayerData.EquippedHelmet.AnimatorController;
+        player.BodyAnimator.runtimeAnimatorController = PlayerData.EquippedBody.AnimatorController;
+        player.BootsAnimator.runtimeAnimatorController = PlayerData.EquippedBoots.AnimatorController;
     }
     /// <summary>
     /// 

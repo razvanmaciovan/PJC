@@ -17,6 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 65ddc1873873219439a44d2aad17345b, type: 2}
   UnlockedEquipment: []
   EquippedWeapon: {fileID: 11400000, guid: 65ddc1873873219439a44d2aad17345b, type: 2}
-  EquippedHelmet: {fileID: 0}
+  EquippedHelmet: {fileID: 11400000, guid: 75f3b25308952b940a9d9c9bd731601e, type: 2}
   EquippedBody: {fileID: 0}
   EquippedBoots: {fileID: 0}
