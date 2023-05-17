@@ -10,17 +10,15 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (CurrentHitPoints < damage)
-        {
-            //TODO Death Anim
-            //TODO Reward Screen
-            RewardManager.Instance.OnBossKilled(EquipmentLevel + (int)SelectedDifficulty);
-            print("DEAD");
-            return;
-        }
 
         CurrentHitPoints -= damage;
-        GetComponent<Animator>().SetTrigger("Hit");
+        if (CurrentHitPoints < 0)
+        {
+            CameraShake.Instance.ShakeCamera(2f, 0.2f);
+            //TODO Reward Screen
+            RewardManager.Instance.OnBossKilled(EquipmentLevel + (int)SelectedDifficulty);
+            return;
+        }
         CameraShake.Instance.ShakeCamera(0.7f, 0.2f);
     }
 }
