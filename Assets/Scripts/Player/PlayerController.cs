@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
     [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
     [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
+    public GameObject WeaponSlot;
+    public Animator HeadAnimator;
+    public Animator BodyAnimator;
+    public Animator BootsAnimator;
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -18,6 +22,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+    private Vector3 _scaleofobject;
+    private float _mousepos;
+    private Camera _mainCamera;
 
     [Header("Events")]
     [Space]
@@ -33,6 +40,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
+        _scaleofobject = transform.localScale;
+        _mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
@@ -41,6 +50,13 @@ public class PlayerController : MonoBehaviour
             OnCrouchEvent = new BoolEvent();
     }
 
+    private void Update()
+    {
+        // Player should face the mouse
+        _mousepos = _mainCamera.ScreenToWorldPoint(Input.mousePosition).x;
+        if (_mousepos <= transform.position.x) transform.localScale = new Vector3(-_scaleofobject.x, _scaleofobject.y, _scaleofobject.z);
+        else transform.localScale = new Vector3(_scaleofobject.x, _scaleofobject.y, _scaleofobject.z);
+    }
     private void FixedUpdate()
     {
         bool wasGrounded = m_Grounded;
@@ -110,19 +126,6 @@ public class PlayerController : MonoBehaviour
             Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
             // And then smoothing it out and applying it to the character
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-
-            // If the input is moving the player right and the player is facing left...
-            if (move > 0 && !m_FacingRight)
-            {
-                // ... flip the player.
-                Flip();
-            }
-            // Otherwise if the input is moving the player left and the player is facing right...
-            else if (move < 0 && m_FacingRight)
-            {
-                // ... flip the player.
-                Flip();
-            }
         }
         // If the player should jump...
         if (m_Grounded && jump)
@@ -131,17 +134,5 @@ public class PlayerController : MonoBehaviour
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
-    }
-
-
-    private void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        m_FacingRight = !m_FacingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
     }
 }

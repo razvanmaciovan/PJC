@@ -10,4 +10,12 @@ namespace Equipment
         Body,
         Boots
     }
+
+    public enum WeaponType
+    {
+        Sword,
+        Axe,
+        Spear,
+        Dagger
+    }
 }
