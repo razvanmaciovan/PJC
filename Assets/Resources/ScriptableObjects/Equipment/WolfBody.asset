@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b267fec806b637649abd911601008088, type: 3}
-  m_Name: DefaultBoots
+  m_Name: WolfBody
   m_EditorClassIdentifier: 
-  Name: Default boots
-  EquipmentLevel: 0
-  EquipmentType: 2
-  AnimatorController: {fileID: 9100000, guid: 75fd6bab0a5cec64cac61f09514e808f, type: 2}
+  Name: Wolf helmet
+  EquipmentLevel: 10
+  EquipmentType: 1
+  AnimatorController: {fileID: 22100000, guid: c3621c71aca3c2a4bad0ac8683a5a0ba, type: 2}

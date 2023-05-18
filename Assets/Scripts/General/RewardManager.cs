@@ -22,6 +22,7 @@ public class RewardManager : Singleton<RewardManager>
         } else if (eq == null && weapon == null)
         {
             //TODO Popup "Got all equipmenet for current level"
+            print($"No gear for level {equipmentLevel}");
         }
         else
         {

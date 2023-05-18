@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
 
     public void Start()
     {
+        //DataManager.Instance.LoadJson();
         StateController.ChangeState(GameState.Start);
         //_mainCanvas = GameObject.FindGameObjectWithTag(UnityTags.Canvas.ToString());
         OnLevelWasLoaded(1);
@@ -37,7 +38,7 @@ public class GameManager : Singleton<GameManager>
         PlayerData.EquippedWeapon.Spawn(weaponSlot.transform);
         player.HeadAnimator.runtimeAnimatorController = PlayerData.EquippedHelmet.AnimatorController;
         player.BodyAnimator.runtimeAnimatorController = PlayerData.EquippedBody.AnimatorController;
-        player.BootsAnimator.runtimeAnimatorController = PlayerData.EquippedBoots.AnimatorController;
+       // player.BootsAnimator.runtimeAnimatorController = PlayerData.EquippedBoots.AnimatorController;
     }
     /// <summary>
     /// 
@@ -90,6 +91,17 @@ public class GameManager : Singleton<GameManager>
 
             yield return null;
         }
+    }
+
+    public void OnBossKilled(EnemyScriptableObject boss)
+    {
+        RewardManager.Instance.OnBossKilled(boss.EquipmentLevel + (int)boss.Difficulty);
+        GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString()).GetComponent<CameraBossDefeat>().OnBossKilled();
+    }
+
+    public void OnPlayerDeath()
+    {
+
     }
 
     private void Update()

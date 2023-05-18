@@ -15,14 +15,20 @@ public class PlayerMovement : MonoBehaviour
     public float dashCooldown = 1f;
     private float dashCounter, dashCoolCounter;
 
-    float horizontalMove = 0f;
-    
-    bool jump   = false;
-    bool crouch = false;
+    private float horizontalMove;
+
+    private bool jump;
+    private bool crouch;
+    public bool isDead;
 
     // Update is called once per frame
-    void Update() 
+    void Start()
     {
+        isDead = false;
+    }
+    void Update()
+    {
+        if (isDead) return;
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         if (Input.GetButtonDown("Jump"))
@@ -67,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isDead) return;
         // Move player
         playerCtrl.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,6 +26,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 _scaleofobject;
     private float _mousepos;
     private Camera _mainCamera;
+    [Header("Combat")]
+    [Space]
+    public float Health = 100;
+
+    public bool IsDead;
+    private bool canBeHit;
+    public float InvulnerableDuration;
 
     [Header("Events")]
     [Space]
@@ -50,11 +58,18 @@ public class PlayerController : MonoBehaviour
             OnCrouchEvent = new BoolEvent();
     }
 
+    private void Start()
+    {
+        IsDead = false;
+        canBeHit = true;
+    }
     private void Update()
     {
+        if (IsDead) return;
         // Player should face the mouse
         _mousepos = _mainCamera.ScreenToWorldPoint(Input.mousePosition).x;
-        if (_mousepos <= transform.position.x) transform.localScale = new Vector3(-_scaleofobject.x, _scaleofobject.y, _scaleofobject.z);
+        if (_mousepos <= transform.position.x)
+            transform.localScale = new Vector3(-_scaleofobject.x, _scaleofobject.y, _scaleofobject.z);
         else transform.localScale = new Vector3(_scaleofobject.x, _scaleofobject.y, _scaleofobject.z);
     }
     private void FixedUpdate()
@@ -134,5 +149,28 @@ public class PlayerController : MonoBehaviour
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if(canBeHit)
+        {
+            Health -= damage;
+            StartCoroutine(Invulnerable());
+        }
+        if (Health <= 0)
+        {
+            IsDead = true;
+            GetComponent<PlayerMovement>().isDead = true;
+            GameManager.Instance.OnPlayerDeath();
+        }
+    }
+
+    IEnumerator Invulnerable()
+    {
+        canBeHit = false;
+        yield return new WaitForSeconds(InvulnerableDuration);
+        canBeHit = true;
+        //yield break;
     }
 }

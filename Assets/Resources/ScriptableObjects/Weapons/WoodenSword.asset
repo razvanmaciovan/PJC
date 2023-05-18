@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Wooden Sword
   EquipmentLevel: 5
-  Damage: 7
+  Damage: 50
   Delay: 1
   WeaponType: 0
   AnimatorController: {fileID: 9100000, guid: ec666345682076b4dbee19782fbcf771, type: 2}

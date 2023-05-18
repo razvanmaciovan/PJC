@@ -27,6 +27,11 @@ public class MinotaurIdle : StateMachineBehaviour
         {
             animator.SetTrigger("Charge");
         }
+
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
+            animator.SetTrigger("NormalAttack");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
