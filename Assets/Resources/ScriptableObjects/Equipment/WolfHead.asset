@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WolfHead
   m_EditorClassIdentifier: 
   Name: Wolf helmet
-  EquipmentLevel: 5
+  EquipmentLevel: 10
   EquipmentType: 0
   AnimatorController: {fileID: 22100000, guid: c67e7f327ed31824ebacac2567771c07, type: 2}

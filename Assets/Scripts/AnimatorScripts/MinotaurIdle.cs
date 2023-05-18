@@ -26,6 +26,12 @@ public class MinotaurIdle : StateMachineBehaviour
         if (Vector2.Distance(player.position, rb.position) >= 3*attackRange)
         {
             animator.SetTrigger("Charge");
+            //animator.SetTrigger("Stomp");
+        }
+
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
+            animator.SetTrigger("NormalAttack");
         }
     }
 

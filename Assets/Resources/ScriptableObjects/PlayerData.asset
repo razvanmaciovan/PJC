@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnlockedWeapons:
   - {fileID: 11400000, guid: 88089958753d6c542b91d5f79945e1fd, type: 2}
-  - {fileID: 11400000, guid: 65ddc1873873219439a44d2aad17345b, type: 2}
-  UnlockedEquipment: []
-  EquippedWeapon: {fileID: 11400000, guid: 65ddc1873873219439a44d2aad17345b, type: 2}
-  EquippedHelmet: {fileID: 11400000, guid: 75f3b25308952b940a9d9c9bd731601e, type: 2}
-  EquippedBody: {fileID: 0}
-  EquippedBoots: {fileID: 0}
+  UnlockedEquipment:
+  - {fileID: 11400000, guid: 7ad32a2515620dc4890dee4b719a6f56, type: 2}
+  - {fileID: 11400000, guid: ae1d0921fab4a7b47ac4d2d47fce0913, type: 2}
+  - {fileID: 11400000, guid: 611011ec2bcf4da4fbb6d203fc16e35d, type: 2}
+  EquippedWeapon: {fileID: 11400000, guid: 88089958753d6c542b91d5f79945e1fd, type: 2}
+  EquippedHelmet: {fileID: 11400000, guid: 611011ec2bcf4da4fbb6d203fc16e35d, type: 2}
+  EquippedBody: {fileID: 11400000, guid: 7ad32a2515620dc4890dee4b719a6f56, type: 2}
+  EquippedBoots: {fileID: 11400000, guid: ae1d0921fab4a7b47ac4d2d47fce0913, type: 2}

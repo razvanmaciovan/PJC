@@ -31,7 +31,8 @@ namespace UnityTypes
         TaskSelection,
         InteractUi,
         Tasks,
-        PreviewTask
+        PreviewTask,
+        BossCamera
     }
 
     public enum UnityScenes

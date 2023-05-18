@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: Default boots
   EquipmentLevel: 0
   EquipmentType: 2
-  AnimatorController: {fileID: 0}
+  AnimatorController: {fileID: 9100000, guid: 75fd6bab0a5cec64cac61f09514e808f, type: 2}

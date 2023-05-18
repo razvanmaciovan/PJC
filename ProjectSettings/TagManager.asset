@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - BossCamera
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
+  - Enemy
+  - DeathScreen
   - 
   - 
   - 
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1307513981
+    locked: 0
+  - name: Enemy
+    uniqueID: 3290268331
     locked: 0

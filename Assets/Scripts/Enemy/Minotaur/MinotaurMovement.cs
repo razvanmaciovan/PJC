@@ -56,4 +56,10 @@ public class MinotaurMovement : MonoBehaviour
             isFlipped = true;
         }
     }
+
+    public void Stomp()
+    {
+        CameraShake.Instance.ShakeCamera(4f,0.2f);
+        //TODO Deal damage to player if he collides with the ground
+    }
 }
