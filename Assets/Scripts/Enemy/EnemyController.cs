@@ -54,17 +54,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.GetComponent<PlayerController>().TakeDamage(CalculateDamageToPlayer());
-            Debug.Log("damage player");
-        }
-    }
-
-    private int CalculateDamageToPlayer()
+    public int CalculateDamageToPlayer()
     {
         if (DataManager.Instance.GetPlayerEquipmentLevel() >= EquipmentLevel) return Damage;
 

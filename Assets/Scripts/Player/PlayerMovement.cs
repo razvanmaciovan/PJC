@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalMove;
 
     private bool jump;
-    private bool crouch;
     public bool isDead;
 
     // Update is called once per frame
@@ -34,15 +33,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-        }
-
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        } 
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
         }
 
         if (Input.GetKeyDown(KeyCode.F))
@@ -75,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDead) return;
         // Move player
-        playerCtrl.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        playerCtrl.Move(horizontalMove * Time.fixedDeltaTime, jump);
         jump = false;
     }
 }

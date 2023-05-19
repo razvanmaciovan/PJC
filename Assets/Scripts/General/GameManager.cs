@@ -2,6 +2,7 @@ using StateManager;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,22 +24,25 @@ public class GameManager : Singleton<GameManager>
 
     private void OnLevelWasLoaded(int level)
     {
-        var player = GameObject.FindGameObjectWithTag(UnityTags.Player.ToString()).GetComponent<PlayerController>();
+        var currentScene = SceneManager.GetActiveScene().buildIndex;
+        switch (currentScene)
+        {
+            case (int)UnityScenes.Hub:
+                UiManager.Instance.RefreshPlayerGear(false);
+                break;
+            case (int)UnityScenes.StartMenu:
+                break;
+            default:
+                UiManager.Instance.RefreshPlayerGear();
+                break;
+
+
+        }
         print("level load");
         //_mainCanvas = GameObject.FindGameObjectWithTag(UnityTags.Canvas.ToString());
         //if (LastScene != UnityScenes.Home ||
             //SceneManager.GetActiveScene().buildIndex == (int)UnityScenes.StartMenu) return;
-        var weaponSlot = player.WeaponSlot;
-        if (weaponSlot.transform.childCount > 0)
-        {
-            foreach (Transform child in weaponSlot.transform) {
-                Destroy(child.gameObject);
-            }
-        }
-        PlayerData.EquippedWeapon.Spawn(weaponSlot.transform);
-        player.HeadAnimator.runtimeAnimatorController = PlayerData.EquippedHelmet.AnimatorController;
-        player.BodyAnimator.runtimeAnimatorController = PlayerData.EquippedBody.AnimatorController;
-       // player.BootsAnimator.runtimeAnimatorController = PlayerData.EquippedBoots.AnimatorController;
+
     }
     /// <summary>
     /// 
