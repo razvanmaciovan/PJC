@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MinotaurMedium
   m_EditorClassIdentifier: 
   Name: Minotaur
-  EquipmentLevel: 40
+  EquipmentLevel: 15
   Damage: 10
   MaxHitpoints: 150
   Difficulty: 10

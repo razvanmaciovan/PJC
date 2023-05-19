@@ -3329,7 +3329,7 @@ PrefabInstance:
     - target: {fileID: 5523725821155610423, guid: e3cf9a8078a0e684db9ac89f469abfbf, type: 3}
       propertyPath: Enemy
       value: 
-      objectReference: {fileID: 11400000, guid: f9337ce2984ad9d46bc3b6a143e0965a, type: 2}
+      objectReference: {fileID: 11400000, guid: 3cc90cd35d4f60b4b81bb8a1adf664e0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3cf9a8078a0e684db9ac89f469abfbf, type: 3}
 --- !u!4 &5523725820869467484 stripped

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WoodenSword
   m_EditorClassIdentifier: 
   Name: Wooden Sword
-  EquipmentLevel: 10
+  EquipmentLevel: 5
   Damage: 10
   Delay: 1
   WeaponType: 0

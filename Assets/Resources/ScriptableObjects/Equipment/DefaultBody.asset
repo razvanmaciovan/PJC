@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultBody
   m_EditorClassIdentifier: 
   Name: Default body
-  EquipmentLevel: 10
+  EquipmentLevel: 5
   EquipmentType: 1
   AnimatorController: {fileID: 9100000, guid: 80a79d8aa9d957c4991b1eab00bef577, type: 2}
   IconSprite: {fileID: -2072950554, guid: 9137e70948dedf3429071471b73f43be, type: 3}

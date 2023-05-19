@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultHead
   m_EditorClassIdentifier: 
   Name: Default head
-  EquipmentLevel: 10
+  EquipmentLevel: 5
   EquipmentType: 0
   AnimatorController: {fileID: 9100000, guid: 48c2bd82e73269040a7c1b93d1e8afa9, type: 2}
   IconSprite: {fileID: -297362731, guid: 9137e70948dedf3429071471b73f43be, type: 3}
