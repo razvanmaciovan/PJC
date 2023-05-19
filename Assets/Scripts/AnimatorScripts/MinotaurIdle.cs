@@ -25,19 +25,20 @@ public class MinotaurIdle : StateMachineBehaviour
 
         if (Vector2.Distance(player.position, rb.position) >= 3*attackRange)
         {
-            animator.SetTrigger("Charge");
-            //animator.SetTrigger("Stomp");
+            animator.SetTrigger("Stomp");
         }
 
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
-            animator.SetTrigger("NormalAttack");
+            var x = Random.Range(0, 2);
+            animator.SetTrigger(x == 0 ? "NormalAttack" : "SpinAttack");
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //animator.ResetTrigger("Attack");
+        animator.ResetTrigger("SpinAttack");
+        animator.ResetTrigger("NormalAttack");
     }
 }
