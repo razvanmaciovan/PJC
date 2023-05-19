@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Minotaur
   EquipmentLevel: 30
-  Damage: 20
+  Damage: 15
   MaxHitpoints: 200
   Difficulty: 35
   EnemyPrefab: {fileID: 5523725821155610418, guid: e3cf9a8078a0e684db9ac89f469abfbf, type: 3}
