@@ -32,14 +32,14 @@ namespace UnityTypes
         InteractUi,
         Tasks,
         PreviewTask,
-        BossCamera
+        BossCamera,
+        Enemy
     }
 
     public enum UnityScenes
     {
         StartMenu,
-        Home,
-        Shop,
+        Hub,
         Arena1
     }
     

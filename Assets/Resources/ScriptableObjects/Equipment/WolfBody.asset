@@ -16,3 +16,4 @@ MonoBehaviour:
   EquipmentLevel: 10
   EquipmentType: 1
   AnimatorController: {fileID: 22100000, guid: c3621c71aca3c2a4bad0ac8683a5a0ba, type: 2}
+  IconSprite: {fileID: -1867132134, guid: e9684f4306db9dc488cffc2b1714b843, type: 3}

@@ -14,9 +14,9 @@ public class WeaponScriptableObject : ScriptableObject
     public RuntimeAnimatorController AnimatorController;
     public GameObject WeaponPrefab;
 
-    public void Spawn(Transform handTransform)
+    public void Spawn(Transform handTransform, bool attack = true)
     {
         var spawned = Instantiate(WeaponPrefab, handTransform);
-        spawned.GetComponent<WeaponController>().Init(this);
+        spawned.GetComponent<WeaponController>().Init(this, attack);
     }
 }

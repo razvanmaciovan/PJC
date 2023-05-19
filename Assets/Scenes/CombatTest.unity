@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4283552487
-  m_fontColor: {r: 0.9056604, g: 0.8237302, b: 0.31954432, a: 1}
+  m_fontColor: {r: 0.9056604, g: 0.8237302, b: 0.31954432, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2808,7 +2808,6 @@ GameObject:
   - component: {fileID: 2090382273}
   - component: {fileID: 2090382276}
   - component: {fileID: 2090382275}
-  - component: {fileID: 2090382274}
   - component: {fileID: 2090382277}
   m_Layer: 6
   m_Name: Player
@@ -2856,8 +2855,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   m_GroundCheck: {fileID: 616138526}
-  m_CeilingCheck: {fileID: 270073369}
-  m_CrouchDisableCollider: {fileID: 2090382275}
   WeaponSlot: {fileID: 1542262825}
   HeadAnimator: {fileID: 183356487}
   BodyAnimator: {fileID: 786073300}
@@ -2868,25 +2865,6 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!58 &2090382274
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090382270}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: f0a8b952bb7df41448d535ce898974e3, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.040000036, y: -1.0018017}
-  serializedVersion: 2
-  m_Radius: 0.49130994
 --- !u!61 &2090382275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2900,7 +2878,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.16062784}
+  m_Offset: {x: 0.045386314, y: -0.5531738}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2911,7 +2889,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6602931}
+  m_Size: {x: 1.024756, y: 1.8733435}
   m_EdgeRadius: 0
 --- !u!50 &2090382276
 Rigidbody2D:

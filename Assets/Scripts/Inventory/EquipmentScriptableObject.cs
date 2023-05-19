@@ -10,4 +10,5 @@ public class EquipmentScriptableObject : ScriptableObject
     public int EquipmentLevel;
     public EquipmentType EquipmentType;
     public RuntimeAnimatorController AnimatorController;
+    public Sprite IconSprite;
 }

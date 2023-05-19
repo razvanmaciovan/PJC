@@ -16,6 +16,7 @@ public class WeaponController : MonoBehaviour
     private AudioSource sound;
     private float nextAttack;
     private bool isHit;
+    private bool canAttack = true;
 
     void Start()
     {
@@ -24,18 +25,22 @@ public class WeaponController : MonoBehaviour
         //SetVolume();
     }
 
-    public void Init(WeaponScriptableObject weapon)
+    public void Init(WeaponScriptableObject weapon, bool attack = true)
     {
         anim = gameObject.GetComponent<Animator>();
         _damage = weapon.Damage;
         _delay = weapon.Delay;
         anim.runtimeAnimatorController = weapon.AnimatorController;
+        canAttack = attack;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        if(canAttack)
+        {
+            Attack();
+        }
     }
    
 

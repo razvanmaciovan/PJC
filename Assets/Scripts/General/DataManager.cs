@@ -11,10 +11,10 @@ public class DataManager : Singleton<DataManager>
 
     private const string PLAYER_DATA_PATH = "/PlayerData.json";
 
-    public int GetPlayerEquipmentLevel() => PlayerData.EquippedBody.EquipmentLevel +
+    public int GetPlayerEquipmentLevel() => (PlayerData.EquippedBody.EquipmentLevel +
                                             PlayerData.EquippedBoots.EquipmentLevel +
                                             PlayerData.EquippedHelmet.EquipmentLevel +
-                                            PlayerData.EquippedWeapon.EquipmentLevel;
+                                            PlayerData.EquippedWeapon.EquipmentLevel) / 4;
 
     public WeaponScriptableObject GetRandomWeaponByLevel(int level)
     {
