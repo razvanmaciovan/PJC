@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public Animator BootsAnimator;
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-    private bool m_Grounded;            // Whether or not the player is grounded.
+    public bool m_Grounded;            // Whether or not the player is grounded.
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private Camera _mainCamera;
     [Header("Combat")]
     [Space]
-    public float Health = 100;
+    public int Health = 100;
 
     public bool IsDead;
     private bool canBeHit;

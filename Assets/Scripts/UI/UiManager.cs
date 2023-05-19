@@ -5,7 +5,7 @@ using UnityTypes;
 
 public class UiManager : Singleton<UiManager>
 {
-    public void RefreshPlayerGear(bool shouldWeaponBeUsaable = true)
+    public void RefreshPlayerGear(bool shouldWeaponBeUsable = true)
     {
         var player = GameObject.FindGameObjectWithTag(UnityTags.Player.ToString()).GetComponent<PlayerController>();
         var weaponSlot = player.WeaponSlot;
@@ -17,7 +17,7 @@ public class UiManager : Singleton<UiManager>
             }
         }
 
-        DataManager.Instance.PlayerData.EquippedWeapon.Spawn(weaponSlot.transform, shouldWeaponBeUsaable);
+        DataManager.Instance.PlayerData.EquippedWeapon.Spawn(weaponSlot.transform, shouldWeaponBeUsable);
         player.HeadAnimator.runtimeAnimatorController =
             DataManager.Instance.PlayerData.EquippedHelmet.AnimatorController;
         player.BodyAnimator.runtimeAnimatorController = DataManager.Instance.PlayerData.EquippedBody.AnimatorController;

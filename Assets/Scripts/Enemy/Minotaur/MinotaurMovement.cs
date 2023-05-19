@@ -7,12 +7,6 @@ using UnityTypes;
 public class MinotaurMovement : MonoBehaviour
 {
     public Animator animator;
-    public float horizontalMoveSpeed;
-    public bool b_Attack1   = false;
-    public bool b_Charge    = false;
-    public bool b_Spin      = false;
-    public bool b_Stab      = false;
-    public bool b_Stomp     = false;
     private Transform player;
     public bool isFlipped;
     private EnemyController enemyController;
@@ -61,5 +55,9 @@ public class MinotaurMovement : MonoBehaviour
     {
         CameraShake.Instance.ShakeCamera(4f,0.2f);
         //TODO Deal damage to player if he collides with the ground
+        if (player.GetComponent<PlayerController>().m_Grounded)
+        {
+            player.GetComponent<PlayerController>().TakeDamage(enemyController.CalculateDamageToPlayer());
+        }
     }
 }
