@@ -13,9 +13,12 @@ public class EnemyController : MonoBehaviour
 
     [Header("Bonus damage output")] 
     [Space]
-    public const float EasyPercentage = 0.3f;
-    public const float MediumPercentage = 0.75f;
-    public const float HardPercentage = 1.5f;
+    public const float EasyPercentage = 0.0f;
+    public const float MediumPercentage = 0.0f;
+    public const float HardPercentage = 0.5f;
+    public const float EasyPercentageDebuff = 0.3f;
+    public const float MediumPercentageDebuff = 0.5f;
+    public const float HardPercentageDebuff = 0.25f;
 
 
     public void Awake()
@@ -46,11 +49,11 @@ public class EnemyController : MonoBehaviour
         switch (SelectedDifficulty)
         {
             case EnemyDifficulty.Easy:
-                return (int)(damage - damage * 0.3);
+                return (int)(damage - damage * EasyPercentageDebuff);
             case EnemyDifficulty.Medium:
-                return (int)(damage - damage * 0.5);
+                return (int)(damage - damage * MediumPercentageDebuff);
             default:
-                return (int)(damage - damage * 0.7);
+                return (int)(damage - damage * HardPercentageDebuff);
         }
     }
 
