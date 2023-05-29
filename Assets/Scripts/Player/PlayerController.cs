@@ -114,6 +114,8 @@ public class PlayerController : MonoBehaviour
         {
             IsDead = true;
             GetComponent<PlayerMovement>().isDead = true;
+            m_Rigidbody2D.freezeRotation = true;
+            GetComponentInChildren<WeaponController>().canAttack = false;
             GameManager.Instance.OnPlayerDeath();
         }
     }

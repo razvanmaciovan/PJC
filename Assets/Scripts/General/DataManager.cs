@@ -29,14 +29,16 @@ public class DataManager : Singleton<DataManager>
 
     public void SaveIntoJson()
     {
-        print($"Saved to {Application.persistentDataPath + PLAYER_DATA_PATH}");
         var player = JsonUtility.ToJson(PlayerData, true);
         File.WriteAllText(Application.persistentDataPath + PLAYER_DATA_PATH, player);
     }
 
     public bool LoadJson()
     {
-        if (!File.Exists(Application.persistentDataPath + PLAYER_DATA_PATH)) return false;
+        if (!File.Exists(Application.persistentDataPath + PLAYER_DATA_PATH))
+        {
+            return false;
+        }
         string playerJson = File.ReadAllText(Application.persistentDataPath + PLAYER_DATA_PATH);
 
         JsonUtility.FromJsonOverwrite(playerJson, PlayerData);

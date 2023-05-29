@@ -2,6 +2,8 @@ using StateManager;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -101,13 +103,40 @@ public class GameManager : Singleton<GameManager>
     {
         RewardManager.Instance.OnBossKilled(boss.EquipmentLevel + (int)boss.Difficulty);
         GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString()).GetComponent<CameraBossDefeat>().OnBossKilled();
+        UnlockNextBoss();
     }
 
     public void OnPlayerDeath()
     {
-
+        GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString())
+            .GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 3;
+        StartCoroutine(FadeToBlack());
     }
 
+    private IEnumerator FadeToBlack()
+    {
+        var fadeToBlackPrefab = Resources.Load<GameObject>("Prefabs/FadeToBlack");
+        Instantiate(fadeToBlackPrefab,  GameObject.FindGameObjectWithTag(UnityTags.Canvas.ToString()).transform);
+        yield return new WaitForSecondsRealtime(3);
+        ChangeScene(UnityScenes.Hub);
+    }
+
+    public void UnlockNextBoss()
+    {
+        var totalBosses = Resources.Load<EnemyListScriptableObject>("ScriptableObjects/TotalBosses");
+        var availableBosses = Resources.Load<EnemyListScriptableObject>("ScriptableObjects/AvailableBosses");
+
+        var nextBoss = totalBosses.EnemyList.FirstOrDefault(b => !availableBosses.EnemyList.Contains(b));
+
+        if (nextBoss is null)
+        {
+            Debug.LogError("RAN OUT OF BOSSES");
+        }
+        else
+        {
+            availableBosses.EnemyList.Add(nextBoss);
+        }
+    }
     private void Update()
     {
         //if (Input.GetKeyUp(KeyCode.Escape))

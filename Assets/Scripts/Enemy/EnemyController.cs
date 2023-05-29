@@ -20,9 +20,11 @@ public class EnemyController : MonoBehaviour
     public const float MediumPercentageDebuff = 0.5f;
     public const float HardPercentageDebuff = 0.25f;
 
+    private bool dead = false;
 
     public void Awake()
     {
+        Enemy = Resources.Load<EnemyScriptableObject>("ScriptableObjects/SelectedBoss");
         CurrentHitPoints = Enemy.MaxHitpoints;
         Damage = Enemy.Damage;
         EquipmentLevel = Enemy.EquipmentLevel;
@@ -30,12 +32,14 @@ public class EnemyController : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        if (dead) return;
         CurrentHitPoints -= CalculateFinalDamage(damage);
         if (CurrentHitPoints <= 0)
         {
             CameraShake.Instance.ShakeCamera(2f, 0.2f);
             //TODO Reward Screen
             GameManager.Instance.OnBossKilled(Enemy);
+            dead = true;
             return;
         }
         CameraShake.Instance.ShakeCamera(0.7f, 0.2f);

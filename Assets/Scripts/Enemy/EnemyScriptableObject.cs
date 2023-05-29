@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityTypes;
 
 [CreateAssetMenu(fileName = "Boss", menuName = "ScriptableObjects/Enemy")]
 public class EnemyScriptableObject : ScriptableObject
@@ -13,4 +15,6 @@ public class EnemyScriptableObject : ScriptableObject
     public GameObject EnemyPrefab;
     public float StartingPositionX;
     public float StartingPositionY;
+    public UnityScenes Scene;
+    public Sprite Icon;
 }

@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07eb2474cf6492640959c1462c9b59ce, type: 3}
-  m_Name: MinotaurEasy
+  m_Name: Minotaur2
   m_EditorClassIdentifier: 
   Name: Minotaur
-  EquipmentLevel: 5
+  EquipmentLevel: 15
   Damage: 10
-  MaxHitpoints: 100
-  Difficulty: 0
+  MaxHitpoints: 150
+  Difficulty: 10
   EnemyPrefab: {fileID: 5523725821155610418, guid: e3cf9a8078a0e684db9ac89f469abfbf, type: 3}
   StartingPositionX: -6.41
   StartingPositionY: 0
+  Scene: 2
+  Icon: {fileID: -110487348, guid: 48e31c4e5c1e3fb4dbc402679cee38aa, type: 3}

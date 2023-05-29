@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/HubScene.unity
     guid: 2da28eab8e46eac4da3241d250b8b103
   - enabled: 1
-    path: Assets/Scenes/CombatTest.unity
+    path: Assets/Scenes/Minotaur.unity
     guid: ba7b6c07d75a72a47b4c287b71d2f521
   m_configObjects: {}

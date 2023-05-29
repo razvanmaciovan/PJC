@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640c3fde61aa29f4cb50afc78cdfcbd4, type: 3}
+  m_Name: AvailableBosses
+  m_EditorClassIdentifier: 
+  EnemyList:
+  - {fileID: 11400000, guid: f9337ce2984ad9d46bc3b6a143e0965a, type: 2}
+  - {fileID: 11400000, guid: 54f07ef33b814a340be714ce479b79af, type: 2}
+  - {fileID: 11400000, guid: 3cc90cd35d4f60b4b81bb8a1adf664e0, type: 2}
