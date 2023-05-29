@@ -16,7 +16,7 @@ public class WeaponController : MonoBehaviour
     private AudioSource sound;
     private float nextAttack;
     private bool isHit;
-    private bool canAttack = true;
+    public bool canAttack = true;
 
     void Start()
     {

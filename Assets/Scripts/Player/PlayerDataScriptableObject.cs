@@ -12,5 +12,6 @@ public class PlayerDataScriptableObject : ScriptableObject
     public EquipmentScriptableObject EquippedHelmet;
     public EquipmentScriptableObject EquippedBody;
     public EquipmentScriptableObject EquippedBoots;
+    public EnemyListScriptableObject AvailableBosses;
 
 }

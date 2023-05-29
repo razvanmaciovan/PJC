@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityTypes;
 
 public class BossDeathScreen : MonoBehaviour
 {
@@ -22,8 +24,12 @@ public class BossDeathScreen : MonoBehaviour
         _bossDefeat.SetActive(true);
         yield return new WaitForSeconds(2);
         Continue.SetActive(true);
-        Reward.SetActive(true);
-
+        Continue.GetComponent<Button>().onClick.AddListener(continueClicked);
+        //Reward.SetActive(true);
     }
 
+    public void continueClicked()
+    {
+        GameManager.Instance.ChangeScene(UnityScenes.Hub);
+    }
 }

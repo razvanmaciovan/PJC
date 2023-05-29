@@ -40,7 +40,7 @@ namespace UnityTypes
     {
         StartMenu,
         Hub,
-        Arena1
+        Minotaur
     }
     
 }
