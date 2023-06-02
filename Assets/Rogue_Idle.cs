@@ -2,34 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rogue_Run : StateMachineBehaviour
+public class Rogue_Idle : StateMachineBehaviour
 {
-    public float speed = 5.1f;
-    public float attackRange = 3f;
-
-    Transform player;
-    Rigidbody2D rb;
-    RogueMovement rogue;
+    private float timer = 0;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = animator.GetComponent<Rigidbody2D>();
-        rogue = animator.GetComponent<RogueMovement>();
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        rogue.LookAtPlayerRogue();
-        var target = new Vector2(player.position.x, rb.position.y);
-        var newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
+        timer += Time.deltaTime;
 
-        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        if (timer > 2)
         {
-            animator.SetTrigger("Attack");
+            animator.SetFloat("Speed", 0.1f);
         }
     }
 

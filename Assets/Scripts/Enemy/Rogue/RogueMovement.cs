@@ -29,7 +29,7 @@ public class RogueMovement : MonoBehaviour
         animator.SetInteger("Health", enemyController.CurrentHitPoints);
     }
 
-    public void LookAtPlayer()
+    public void LookAtPlayerRogue()
     {
         Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
