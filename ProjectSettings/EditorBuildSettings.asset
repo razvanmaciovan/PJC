@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minotaur.unity
     guid: ba7b6c07d75a72a47b4c287b71d2f521
+  - enabled: 1
+    path: Assets/Scenes/Rogue.unity
+    guid: 9de3fe13e36246d40bd8c6f2444e465d
   m_configObjects: {}
