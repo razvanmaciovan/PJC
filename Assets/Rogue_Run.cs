@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rogue_Run : StateMachineBehaviour
 {
     public float speed = 5.1f;
-    public float attackRange = 3f;
+    public float attackRange = 1f;
 
     Transform player;
     Rigidbody2D rb;
