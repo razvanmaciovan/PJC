@@ -17,8 +17,8 @@ MonoBehaviour:
   Damage: 5
   MaxHitpoints: 50
   Difficulty: 5
-  EnemyPrefab: {fileID: 0}
+  EnemyPrefab: {fileID: 7769701796568450094, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
   StartingPositionX: 0
   StartingPositionY: 0
-  Scene: 2
-  Icon: {fileID: 0}
+  Scene: 3
+  Icon: {fileID: 1086152973, guid: c8903d887da0ce241a28c417618036ba, type: 3}

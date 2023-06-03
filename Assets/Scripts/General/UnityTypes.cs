@@ -40,7 +40,8 @@ namespace UnityTypes
     {
         StartMenu,
         Hub,
-        Minotaur
+        Minotaur,
+        Rogue
     }
     
 }

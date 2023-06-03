@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 
   EquipmentLevel: 0
   Damage: 0
-  MaxHitpoints: 0
+  MaxHitpoints: 50
   Difficulty: 0
   EnemyPrefab: {fileID: 0}
   StartingPositionX: 0
