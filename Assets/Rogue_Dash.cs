@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Rogue_Dash : StateMachineBehaviour
 {
-    public float speed = 5.1f;
-    public float attackRange = 3f;
+    public float speed = 7.1f;
+    public float attackRange = 2f;
 
     Transform player;
     Rigidbody2D rb;
@@ -23,11 +23,14 @@ public class Rogue_Dash : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         rogue.LookAtPlayerRogue();
-        var target = new Vector2(-player.position.x, rb.position.y);
+        var target = new Vector2(player.position.x, rb.position.y);
         var newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
-        animator.SetFloat("Speed", 0);
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

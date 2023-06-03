@@ -8,7 +8,8 @@ public class Rogue_Attack : StateMachineBehaviour
     Rigidbody2D rb;
     RogueMovement rogue;
     private static int startHealth = -1;
-    public float attackRange = 3f;
+    public float attackRange = 1f;
+    public float Speed = 3f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -22,12 +23,10 @@ public class Rogue_Attack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //rogue.LookAtPlayerRogue();
-
-        if (animator.GetInteger("Health") < startHealth && Vector2.Distance(player.position, rb.position) <= attackRange)
-        {
-            animator.SetTrigger("Dash");
-        } 
+        rogue.LookAtPlayerRogue();
+        var target = new Vector2(player.position.x, rb.position.y);
+        var newPos = Vector2.MoveTowards(rb.position, target, Speed * Time.fixedDeltaTime);
+        rb.MovePosition(newPos);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

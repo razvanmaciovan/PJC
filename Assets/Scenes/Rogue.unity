@@ -7416,30 +7416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7769701796568450081, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769701796568450081, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769701796568450081, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.0625
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769701796568450081, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.875
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769701796568450082, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769701796568450082, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7769701796568450083, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -7483,10 +7459,6 @@ PrefabInstance:
     - target: {fileID: 7769701796568450083, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769701796568450093, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7769701796568450094, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
       propertyPath: m_Name

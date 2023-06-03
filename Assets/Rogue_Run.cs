@@ -11,12 +11,15 @@ public class Rogue_Run : StateMachineBehaviour
     Rigidbody2D rb;
     RogueMovement rogue;
 
+    private static int startHealth;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         rogue = animator.GetComponent<RogueMovement>();
+        startHealth = animator.GetInteger("Health");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -31,6 +34,11 @@ public class Rogue_Run : StateMachineBehaviour
         {
             animator.SetTrigger("Attack");
         }
+
+        if (animator.GetInteger("Health") < startHealth)
+        {
+            animator.SetTrigger("Dash");
+        } 
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
