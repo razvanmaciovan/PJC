@@ -17,5 +17,5 @@ MonoBehaviour:
   Damage: 20
   Delay: 2
   WeaponType: 2
-  AnimatorController: {fileID: 9100000, guid: 16391ef6b7938554ebb7612ce8f294e2, type: 2}
+  AnimatorController: {fileID: 9100000, guid: 8e24dc35a1c0978459c5fd1abd048b52, type: 2}
   WeaponPrefab: {fileID: 2675703789730380870, guid: 09afeb0fbe0d777419965a926a7e2eeb, type: 3}
