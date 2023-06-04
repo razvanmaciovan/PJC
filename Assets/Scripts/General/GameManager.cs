@@ -103,7 +103,13 @@ public class GameManager : Singleton<GameManager>
     {
         RewardManager.Instance.OnBossKilled(boss.EquipmentLevel + (int)boss.Difficulty);
         GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString()).GetComponent<CameraBossDefeat>().OnBossKilled();
-        UnlockNextBoss();
+        var defeatedBosses = Resources.Load<EnemyListScriptableObject>("ScriptableObjects/DefeatedBosses");
+        var selectedBosses = Resources.Load<EnemyScriptableObject>("ScriptableObjects/SelectedBoss");
+        if(!defeatedBosses.EnemyList.Contains(selectedBosses))
+        {
+            defeatedBosses.EnemyList.Add(selectedBosses);
+            UnlockNextBoss();
+        }
     }
 
     public void OnPlayerDeath()

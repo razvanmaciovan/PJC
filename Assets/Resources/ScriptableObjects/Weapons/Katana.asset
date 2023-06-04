@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719940de8b79273478e291a0c3a29c77, type: 3}
+  m_Name: Katana
+  m_EditorClassIdentifier: 
+  Name: Katana
+  EquipmentLevel: 40
+  Damage: 20
+  Delay: 2
+  WeaponType: 0
+  AnimatorController: {fileID: 9100000, guid: 40c196eacca93e041a47ee91e1c5d49a, type: 2}
+  WeaponPrefab: {fileID: 6956672446146394033, guid: 2f2bfec5bc9f7cf4fa33393517626562, type: 3}

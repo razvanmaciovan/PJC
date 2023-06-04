@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719940de8b79273478e291a0c3a29c77, type: 3}
+  m_Name: SkullBasher
+  m_EditorClassIdentifier: 
+  Name: SkullBasher
+  EquipmentLevel: 40
+  Damage: 20
+  Delay: 2
+  WeaponType: 1
+  AnimatorController: {fileID: 9100000, guid: 0f50dcbee1b97a549a5da00dde03fef5, type: 2}
+  WeaponPrefab: {fileID: 1464555739833319776, guid: 54237b7c0a69ce043a8f85682e3dc861, type: 3}

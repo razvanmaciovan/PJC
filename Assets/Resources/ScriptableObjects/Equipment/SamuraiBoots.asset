@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b267fec806b637649abd911601008088, type: 3}
+  m_Name: SamuraiBoots
+  m_EditorClassIdentifier: 
+  Name: Samurai boots
+  EquipmentLevel: 5
+  EquipmentType: 2
+  AnimatorController: {fileID: 22100000, guid: 891a8d3b7ab89fe479f2936ecfd26fac, type: 2}
+  IconSprite: {fileID: 38568353, guid: ebb222af4da0d0a48a16e9ebafa5c4e8, type: 3}

@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: YetiPlayerHead
+  m_Controller: {fileID: 9100000, guid: 48c2bd82e73269040a7c1b93d1e8afa9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dfaae6aa60c400249adc92236624f2cd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 819715fae8ca3c5488f06f94238d3405, type: 2}
