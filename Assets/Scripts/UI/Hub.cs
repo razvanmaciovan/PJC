@@ -6,6 +6,7 @@ public class Hub : MonoBehaviour
 {
     public GameObject GearSelectionUi;
     public GameObject BossSelectionUi;
+    public GameObject PlayerGameObject;
 
     private void Awake()
     {
@@ -15,12 +16,14 @@ public class Hub : MonoBehaviour
     {
         GearSelectionUi.SetActive(false);
         BossSelectionUi.SetActive(true);
+        PlayerGameObject.SetActive(false);
     }
 
     public void BossToGear()
     {
         GearSelectionUi.SetActive(true);
         BossSelectionUi.SetActive(false);
+        PlayerGameObject.SetActive(true);
 
     }
 }
