@@ -16,7 +16,7 @@ MonoBehaviour:
   EquipmentLevel: 15
   Damage: 5
   MaxHitpoints: 50
-  Difficulty: 5
+  Difficulty: 10
   EnemyPrefab: {fileID: 7769701796568450094, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
   StartingPositionX: 0
   StartingPositionY: 0

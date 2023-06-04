@@ -105,7 +105,7 @@ public class GameManager : Singleton<GameManager>
         GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString()).GetComponent<CameraBossDefeat>().OnBossKilled();
         var defeatedBosses = Resources.Load<EnemyListScriptableObject>("ScriptableObjects/DefeatedBosses");
         var selectedBosses = Resources.Load<EnemyScriptableObject>("ScriptableObjects/SelectedBoss");
-        if(!defeatedBosses.EnemyList.Contains(selectedBosses))
+        if(defeatedBosses.EnemyList.Count(b => b.EquipmentLevel == selectedBosses.EquipmentLevel) == 0)
         {
             defeatedBosses.EnemyList.Add(selectedBosses);
             UnlockNextBoss();
@@ -114,8 +114,10 @@ public class GameManager : Singleton<GameManager>
 
     public void OnPlayerDeath()
     {
-        GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString())
-            .GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 3;
+        var bossCamera = GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString());
+        bossCamera.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 3;
+        bossCamera.GetComponent<CameraBossDefeat>().Hud.SetActive(false);
+         
         StartCoroutine(FadeToBlack());
     }
 
