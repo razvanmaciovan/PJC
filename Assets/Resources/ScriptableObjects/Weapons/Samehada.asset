@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Samehada
   m_EditorClassIdentifier: 
   Name: Samehada
-  EquipmentLevel: 40
+  EquipmentLevel: 20
   Damage: 20
   Delay: 2
   WeaponType: 0

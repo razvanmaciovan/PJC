@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SharkBody
   m_EditorClassIdentifier: 
   Name: Shark body
-  EquipmentLevel: 10
+  EquipmentLevel: 20
   EquipmentType: 1
   AnimatorController: {fileID: 22100000, guid: c067c1cb8f45d25488693938ead6a42f, type: 2}
   IconSprite: {fileID: 54830488, guid: 95fe25c10ceffd440870d15bc84e72e8, type: 3}

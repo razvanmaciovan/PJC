@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Rogue1
   m_EditorClassIdentifier: 
   Name: Rogue
-  EquipmentLevel: 15
+  EquipmentLevel: 20
   Damage: 5
-  MaxHitpoints: 50
+  MaxHitpoints: 100
   Difficulty: 5
   EnemyPrefab: {fileID: 7769701796568450094, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
   StartingPositionX: 0

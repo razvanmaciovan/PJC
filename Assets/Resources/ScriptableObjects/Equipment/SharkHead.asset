@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SharkHead
   m_EditorClassIdentifier: 
   Name: Shark helmet
-  EquipmentLevel: 10
+  EquipmentLevel: 20
   EquipmentType: 0
   AnimatorController: {fileID: 22100000, guid: 8be97d01cc3b5db4f85493f2896f918a, type: 2}
   IconSprite: {fileID: 353747233, guid: 95fe25c10ceffd440870d15bc84e72e8, type: 3}
