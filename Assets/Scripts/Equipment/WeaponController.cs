@@ -21,8 +21,8 @@ public class WeaponController : MonoBehaviour
     void Start()
     {
         //swingParticles = Particles.GetComponent<Animator>();
-        //sound = gameObject.GetComponent<AudioSource>();
-        //SetVolume();
+        sound = gameObject.GetComponent<AudioSource>();
+        SetVolume();
     }
 
     public void Init(WeaponScriptableObject weapon, bool attack = true)
@@ -80,6 +80,7 @@ public class WeaponController : MonoBehaviour
         
         if (other.gameObject.CompareTag("Enemy") && isHit == false)
         {
+            sound.Play();
             other.gameObject.GetComponent<EnemyController>().TakeDamage(_damage);
             isHit = true;
             Debug.Log("damage");

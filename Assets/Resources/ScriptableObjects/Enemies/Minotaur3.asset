@@ -16,9 +16,9 @@ MonoBehaviour:
   EquipmentLevel: 20
   Damage: 15
   MaxHitpoints: 200
-  Difficulty: 35
+  Difficulty: 15
   EnemyPrefab: {fileID: 5523725821155610418, guid: e3cf9a8078a0e684db9ac89f469abfbf, type: 3}
   StartingPositionX: -6.41
   StartingPositionY: 0
   Scene: 2
-  Icon: {fileID: -110487348, guid: 48e31c4e5c1e3fb4dbc402679cee38aa, type: 3}
+  Icon: {fileID: 21300000, guid: 225b8a793637d2b4184dbc44fa8c804c, type: 3}

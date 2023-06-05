@@ -37,6 +37,7 @@ public class DataManager : Singleton<DataManager>
     {
         if (!File.Exists(Application.persistentDataPath + PLAYER_DATA_PATH))
         {
+            PlayerData.Reset();
             return false;
         }
         string playerJson = File.ReadAllText(Application.persistentDataPath + PLAYER_DATA_PATH);
