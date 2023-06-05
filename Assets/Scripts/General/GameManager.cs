@@ -105,9 +105,10 @@ public class GameManager : Singleton<GameManager>
         GameObject.FindGameObjectWithTag(UnityTags.BossCamera.ToString()).GetComponent<CameraBossDefeat>().OnBossKilled();
         var defeatedBosses = Resources.Load<EnemyListScriptableObject>("ScriptableObjects/DefeatedBosses");
         var selectedBosses = Resources.Load<EnemyScriptableObject>("ScriptableObjects/SelectedBoss");
-        if(defeatedBosses.EnemyList.Count(b => b.EquipmentLevel == selectedBosses.EquipmentLevel) == 0)
+        var totalBosses = Resources.Load<EnemyListScriptableObject>("ScriptableObjects/TotalBosses");
+        if(defeatedBosses.EnemyList.Count(b => b.EquipmentLevel == selectedBosses.EquipmentLevel && b.Name == selectedBosses.Name) == 0)
         {
-            defeatedBosses.EnemyList.Add(selectedBosses);
+            defeatedBosses.EnemyList.Add(totalBosses.EnemyList.First(b => b.EquipmentLevel == selectedBosses.EquipmentLevel && b.Name == selectedBosses.Name));
             UnlockNextBoss();
         }
     }
@@ -147,23 +148,11 @@ public class GameManager : Singleton<GameManager>
     }
     private void Update()
     {
-        //if (Input.GetKeyUp(KeyCode.Escape))
-        //{
-        //    switch (StateController.CurrentGameState)
-        //    {
-        //        case GameState.Loading:
-        //            break;
-        //        case GameState.Paused:
-        //            StateController.ChangeState();
-        //            break;
-        //        case GameState.Start:
-        //            break;
-        //        default:
-        //            print(StateController.CurrentGameState);
-        //            PauseGame();
-        //            break;
-        //    }
-        //}
+        if (Input.GetKeyUp(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex == (int)UnityScenes.Hub)
+        {
+            DataManager.Instance.SaveIntoJson();
+            ChangeScene(UnityScenes.StartMenu);
+        }
     }
 
     //private void PauseGame()

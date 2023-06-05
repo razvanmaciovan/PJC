@@ -6,5 +6,5 @@ public enum EnemyDifficulty
 {
     Easy = 5,
     Medium = 10,
-    Hard = 35
+    Hard = 15
 }

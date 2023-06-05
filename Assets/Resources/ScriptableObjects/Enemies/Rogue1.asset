@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rogue
   EquipmentLevel: 20
-  Damage: 5
+  Damage: 7
   MaxHitpoints: 100
   Difficulty: 5
   EnemyPrefab: {fileID: 7769701796568450094, guid: 959080af8b74b654d9af8e96c564e60c, type: 3}
   StartingPositionX: 0
   StartingPositionY: 0
   Scene: 3
-  Icon: {fileID: 1086152973, guid: c8903d887da0ce241a28c417618036ba, type: 3}
+  Icon: {fileID: 21300000, guid: 926069bdb12e00146a21e1abc65f6b28, type: 3}

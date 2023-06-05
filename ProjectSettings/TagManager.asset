@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - BossCamera
   - Canvas
+  - Audio
   layers:
   - Default
   - TransparentFX

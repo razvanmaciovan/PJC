@@ -33,7 +33,8 @@ namespace UnityTypes
         Tasks,
         PreviewTask,
         BossCamera,
-        Enemy
+        Enemy,
+        Audio
     }
 
     public enum UnityScenes

@@ -20,6 +20,8 @@ public class EnemyController : MonoBehaviour
     public const float MediumPercentageDebuff = 0.5f;
     public const float HardPercentageDebuff = 0.25f;
 
+    private AudioSource _hitSound;
+
     private bool dead = false;
 
     public void Awake()
@@ -29,10 +31,12 @@ public class EnemyController : MonoBehaviour
         Damage = Enemy.Damage;
         EquipmentLevel = Enemy.EquipmentLevel;
         SelectedDifficulty = Enemy.Difficulty;
+        _hitSound = GetComponent<AudioSource>();
     }
     public void TakeDamage(int damage)
     {
         if (dead) return;
+        _hitSound.Play();
         CurrentHitPoints -= CalculateFinalDamage(damage);
         if (CurrentHitPoints <= 0)
         {

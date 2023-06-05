@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public bool IsDead;
     private bool canBeHit;
     public float InvulnerableDuration;
+    private AudioSource _hitSound;
 
     [Header("Events")]
     [Space]
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         _scaleofobject = transform.localScale;
         _mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        _hitSound = GetComponent<AudioSource>();
 
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
@@ -107,6 +109,7 @@ public class PlayerController : MonoBehaviour
     {
         if(canBeHit)
         {
+            _hitSound.Play();
             Health -= damage;
             StartCoroutine(Invulnerable());
         }
