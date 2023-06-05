@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: YetiHead
   m_EditorClassIdentifier: 
   Name: Yeti helmet
-  EquipmentLevel: 10
+  EquipmentLevel: 35
   EquipmentType: 0
   AnimatorController: {fileID: 22100000, guid: 6de73142b2faae04880180d3df8c16dd, type: 2}
   IconSprite: {fileID: -607458686, guid: 185eeeb78879abe44ab32a60b63e2c3d, type: 3}

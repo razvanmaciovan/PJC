@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: YetiBody
   m_EditorClassIdentifier: 
   Name: Yeti Body
-  EquipmentLevel: 10
+  EquipmentLevel: 35
   EquipmentType: 1
   AnimatorController: {fileID: 22100000, guid: 97bb555ab9219d74782b81f7cf9a1073, type: 2}
   IconSprite: {fileID: 336859657, guid: 185eeeb78879abe44ab32a60b63e2c3d, type: 3}

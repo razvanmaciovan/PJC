@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Spear
   m_EditorClassIdentifier: 
   Name: Spear
-  EquipmentLevel: 40
-  Damage: 20
+  EquipmentLevel: 25
+  Damage: 15
   Delay: 2
   WeaponType: 2
   AnimatorController: {fileID: 9100000, guid: 8e24dc35a1c0978459c5fd1abd048b52, type: 2}

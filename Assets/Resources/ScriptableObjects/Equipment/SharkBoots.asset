@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SharkBoots
   m_EditorClassIdentifier: 
   Name: Shark boots
-  EquipmentLevel: 10
+  EquipmentLevel: 20
   EquipmentType: 2
   AnimatorController: {fileID: 22100000, guid: 8dafa6c6a88c33145b1fcbae1dc725d9, type: 2}
   IconSprite: {fileID: -595328921, guid: 95fe25c10ceffd440870d15bc84e72e8, type: 3}

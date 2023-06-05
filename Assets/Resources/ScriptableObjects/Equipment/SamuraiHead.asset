@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SamuraiHead
   m_EditorClassIdentifier: 
   Name: Samurai head
-  EquipmentLevel: 5
+  EquipmentLevel: 25
   EquipmentType: 0
   AnimatorController: {fileID: 22100000, guid: ee048e6f6170cdd488e21a2fa058ef18, type: 2}
   IconSprite: {fileID: 1895598703, guid: ebb222af4da0d0a48a16e9ebafa5c4e8, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SkullBasher
   m_EditorClassIdentifier: 
   Name: SkullBasher
-  EquipmentLevel: 40
-  Damage: 20
+  EquipmentLevel: 35
+  Damage: 25
   Delay: 2
   WeaponType: 1
   AnimatorController: {fileID: 9100000, guid: 0f50dcbee1b97a549a5da00dde03fef5, type: 2}
