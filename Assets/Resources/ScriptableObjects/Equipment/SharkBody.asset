@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b267fec806b637649abd911601008088, type: 3}
   m_Name: SharkBody
   m_EditorClassIdentifier: 
-  Name: Shark body
+  Name: Shark armor
   EquipmentLevel: 20
   EquipmentType: 1
   AnimatorController: {fileID: 22100000, guid: c067c1cb8f45d25488693938ead6a42f, type: 2}

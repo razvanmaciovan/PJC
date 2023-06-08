@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -25,7 +26,11 @@ public class BossDeathScreen : MonoBehaviour
         yield return new WaitForSeconds(2);
         Continue.SetActive(true);
         Continue.GetComponent<Button>().onClick.AddListener(continueClicked);
-        //Reward.SetActive(true);
+        if (RewardManager.Instance.LastReward != String.Empty)
+        {
+            Reward.SetActive(true);
+            Reward.GetComponentInChildren<TextMeshProUGUI>().text = "You have received: \n" + RewardManager.Instance.LastReward;
+        }
     }
 
     public void continueClicked()

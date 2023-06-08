@@ -40,7 +40,6 @@ public class GameManager : Singleton<GameManager>
 
 
         }
-        print("level load");
         //_mainCanvas = GameObject.FindGameObjectWithTag(UnityTags.Canvas.ToString());
         //if (LastScene != UnityScenes.Home ||
             //SceneManager.GetActiveScene().buildIndex == (int)UnityScenes.StartMenu) return;
@@ -77,7 +76,6 @@ public class GameManager : Singleton<GameManager>
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
         //Don't let the Scene activate until you allow it to
         asyncOperation.allowSceneActivation = false;
-        Debug.Log("Pro :" + asyncOperation.progress);
         //When the load is still in progress, output the Text and progress bar
         while (!asyncOperation.isDone)
         {

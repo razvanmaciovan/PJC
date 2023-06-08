@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b267fec806b637649abd911601008088, type: 3}
   m_Name: YetiBody
   m_EditorClassIdentifier: 
-  Name: Yeti Body
+  Name: Yeti armor
   EquipmentLevel: 35
   EquipmentType: 1
   AnimatorController: {fileID: 22100000, guid: 97bb555ab9219d74782b81f7cf9a1073, type: 2}

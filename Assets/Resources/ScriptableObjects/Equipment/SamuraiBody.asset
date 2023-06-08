@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b267fec806b637649abd911601008088, type: 3}
   m_Name: SamuraiBody
   m_EditorClassIdentifier: 
-  Name: Samurai body
+  Name: Samurai armor
   EquipmentLevel: 25
   EquipmentType: 1
   AnimatorController: {fileID: 22100000, guid: 90fb48eda9e1385458588a3c0c76f71e, type: 2}

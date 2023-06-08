@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnlockedWeapons:
   - {fileID: 11400000, guid: 88089958753d6c542b91d5f79945e1fd, type: 2}
+  - {fileID: 11400000, guid: cf62775b741ebb7459c7786ca4a706c7, type: 2}
   UnlockedEquipment:
   - {fileID: 11400000, guid: 611011ec2bcf4da4fbb6d203fc16e35d, type: 2}
   - {fileID: 11400000, guid: 7ad32a2515620dc4890dee4b719a6f56, type: 2}

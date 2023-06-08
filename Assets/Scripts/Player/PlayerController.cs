@@ -128,7 +128,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag(UnityTags.Enemy.ToString()) && other is BoxCollider2D)
         {
             TakeDamage(other.gameObject.GetComponent<EnemyController>().CalculateDamageToPlayer());
-            Debug.Log("damage player");
         }
     }
 

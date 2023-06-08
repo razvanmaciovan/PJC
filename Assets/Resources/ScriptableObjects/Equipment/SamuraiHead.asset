@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b267fec806b637649abd911601008088, type: 3}
   m_Name: SamuraiHead
   m_EditorClassIdentifier: 
-  Name: Samurai head
+  Name: Samurai helmet
   EquipmentLevel: 25
   EquipmentType: 0
   AnimatorController: {fileID: 22100000, guid: ee048e6f6170cdd488e21a2fa058ef18, type: 2}

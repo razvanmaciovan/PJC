@@ -83,7 +83,6 @@ public class WeaponController : MonoBehaviour
             sound.Play();
             other.gameObject.GetComponent<EnemyController>().TakeDamage(_damage);
             isHit = true;
-            Debug.Log("damage");
             StartCoroutine(HitCooldown());
         }
     }
